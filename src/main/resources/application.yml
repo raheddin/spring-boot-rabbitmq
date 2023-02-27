@@ -1,0 +1,19 @@
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: user
+    password: password
+
+
+sr:
+  rabbit:
+    queue:
+      name: raheddin-queue
+    exchange:
+      name: raheddin-exchange
+    routing:
+      name: raheddin-routing
+
+
+
