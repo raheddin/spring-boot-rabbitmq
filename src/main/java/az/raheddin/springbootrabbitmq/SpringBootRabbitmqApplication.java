@@ -30,7 +30,7 @@ public class SpringBootRabbitmqApplication implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
        System.out.println("START");
-        for (int i = 0; i < 1000000; i++) {
+        for (int i = 0; i < 1000; i++) {
             Notification notification = Notification
                     .builder()
                     .notificationId(UUID.randomUUID().toString())
@@ -38,7 +38,7 @@ public class SpringBootRabbitmqApplication implements CommandLineRunner {
                     .msj("Raheddin:"+i)
                     .seen(Boolean.FALSE)
                     .build();
-           // notificationProducer.sendToQueue(notification);
+            notificationProducer.sendToQueue(notification);
         }
     }
 }

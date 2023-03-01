@@ -12,7 +12,8 @@ public class NotificationListener {
 
     @RabbitListener(queues = "raheddin-queue",concurrency = "10")
     public void handleMessage1(Notification notification) throws InterruptedException {
-        Thread.sleep(4000);
+        Thread.sleep(1000);
+        System.out.println("Thread Name:"+Thread.currentThread().getName());
         System.out.println("Z1:" + notification.toString());
     }
 
